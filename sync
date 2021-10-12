@@ -1,0 +1,28 @@
+#!/bin/bash
+# This script is used to back up files to Dropbox on a daily basis
+# Created by Lixinhao Yang
+# Originally written on 10/12/2021
+
+#Define pathes
+BACKUP=/localdata/jcliu/YLXH/scriptlib
+TMP=/localdata/jcliu/YLXH/tem
+DROPBOX=/localdata/jcliu/YLXH/tools/
+DATETIME=`date +%Y_%m_%d`
+DROPBOX_PATH=/Phys42188_sync
+#echo $DATETIME
+echo "============start backup to $TMP/$DATETIME.tar.gz============"
+#echo $TME
+tar -zcvf $TMP/$DATETIME.tar.gz -P $BACKUP
+echo "============start backup to DROPBOX:$DROPBOX_PATH============"
+$DROPBOX/./dropbox_uploader.sh upload $TMP/$DATETIME.tar.gz $DROPBOX_PATH/
+echo "==========delete backup files created five days ago=========="
+DATETIME2=`date -d'-5 day' +%Y_%m_%d`
+if [[ -a $TMP/$DATETIME2.tar.gz ]];then 
+	echo "$TMP/$DATETIME2.tar.gz is exist"
+	rm "$TMP/$DATETIME2.tar.gz"
+else 
+	echo "$TMP/$DATETIME2.tar.gz is not exist"
+fi
+$DROPBOX/./dropbox_uploader.sh delete $DROPBOX_PATH/$DATETIME2.tar.gz
+echo "===================backup success============================"
+
