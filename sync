@@ -3,7 +3,7 @@
 # Created by Lixinhao Yang
 # Originally written on 10/12/2021
 
-#Define pathes
+#Define paths
 BACKUP=/localdata/jcliu/YLXH/scriptlib
 TMP=/localdata/jcliu/YLXH/tem
 DROPBOX=/localdata/jcliu/YLXH/tools/
