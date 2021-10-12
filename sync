@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script is used to back up files to Dropbox on a daily basis
+# This script is used to back up files to Dropbox
 # Created by Lixinhao Yang
 # Originally written on 10/12/2021
 
