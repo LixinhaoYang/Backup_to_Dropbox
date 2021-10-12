@@ -15,7 +15,8 @@ Then directly run the script to configurate it
 $ ./dropbox_uploader.sh
 ```
 
-![image-20211012183608070](C:\Users\25483\AppData\Roaming\Typora\typora-user-images\image-20211012183608070.png)
+![image-20211012183608070](https://user-images.githubusercontent.com/91909941/137040725-48ef04ce-78c2-4e9a-9b3b-cac804fec0af.png)
+
 
 Then open https://www.dropbox.com/developers/apps.
 
@@ -31,7 +32,8 @@ Name your app-------> give a name
 
 In the "Setting" page, you can find the App Key and the App secret.
 
-![image-20211012183928451](C:\Users\25483\AppData\Roaming\Typora\typora-user-images\image-20211012183928451.png)
+![image-20211012183928451](https://user-images.githubusercontent.com/91909941/137040737-e13714a7-b362-43e1-82d6-11cc19cbdba2.png)
+
 
 Then click "Permissions" page, make sure that some following check boxes are selected,  like "files.metadata.write".
 
